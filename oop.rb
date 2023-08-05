@@ -4,13 +4,47 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 
+class Unicorn
+    attr_reader :name, :horn_color, :color
+    def initialize (name, horn_color, color = "silver") 
+        @name = name
+        @horn_color = horn_color
+        @color = color
+    end
+    def say
+        "*~* My name is #{name} and I have a #{horn_color} horn! *~*"
+    end
+end
+
+unicorn1 = Unicorn.new("blanket", "pink")
+p unicorn1.say
+
+unicorn2 = Unicorn.new("bob", "yellow", "purple")
+p unicorn2
+
+
+
 
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
+class Vampire
+    attr_reader :name, :country, :thirsty, :pet
+    def initialize (name, country, thirsty = "true", pet = "bat")
+        @name = name
+        @country = country
+        @thirsty = thirsty
+        @pet = pet
+    end
+    def drink
+        thirsty = "false"
+    end
+end
 
+vampire1 = Vampire.new("Dracula", "Transylvania")
+p vampire1.drink
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
@@ -18,6 +52,18 @@
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
+
+class Dragon
+    attr_reader :name, :rider, :color, :is_hungry 
+    def initialize (name, rider, color, is_hungry = true)
+        @name = name
+        @rider = rider
+        @color = color
+        @is_hungry = is_hungry
+    end
+    def eat() 
+        if () > 4 
+        else still hungry
 
 
 #  Write a Hobbit class
