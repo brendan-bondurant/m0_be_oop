@@ -89,33 +89,35 @@
 #  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
 
-# class Hobbit
-#     attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring
-#     def initialize (name, disposition, age = 0, is_adult = false, is_old = false, has_ring = false)
-#         @name = name
-#         @disposition = disposition
-#         @age = age
-#         @is_adult = is_adult
-#         @is_old = is_old
-#         @has_ring = has_ring
-#     end
-#     def celebrate_birthday
-#         @age = age.next
-#             if @age >= 33
-#                 @is_adult = true
-#             end
-#             if @age >= 101
-#                 @is_old = true
-#             end
-#         end
-#         if name == "Frodo"
-#             @has_ring = true
-#         end
-#     end
-# hobbit1 = Hobbit.new("Sam", "loyal")
-# p hobbit1
-# hobbit1.celebrate_birthday
-# p hobbit1
+class Hobbit
+    attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring
+    def initialize (name, disposition, age = 0, is_adult = false, is_old = false, has_ring = false)
+        @name = name
+        @disposition = disposition
+        @age = age
+        @is_adult = is_adult
+        @is_old = is_old
+        @has_ring = has_ring
+                     if 
+                     @name == "Frodo"
+                     @has_ring = true
+                    else @has_ring == false
+        end
+    end
+    def celebrate_birthday
+        @age = age.next
+            if @age >= 33
+                @is_adult = true
+            end
+            if @age >= 101
+                @is_old = true
+            end
+        end
+end
+hobbit1 = Hobbit.new("Sam", "loyal")
+p hobbit1
+hobbit1.celebrate_birthday
+p hobbit1
 
-# hobbit2 = Hobbit.new("Frodo", "reluctant hero")
-# p hobbit2
+hobbit2 = Hobbit.new("Frodo", "reluctant hero")
+p hobbit2
