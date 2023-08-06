@@ -4,7 +4,7 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 
-# class Unicorn  X
+# class Unicorn  
 #     attr_reader :name, :horn_color, :color
 #     def initialize (name, horn_color, color = "silver") 
 #         @name = name
@@ -23,7 +23,7 @@
 # p unicorn2
 
 
-#  Write a class called Vampire X
+#  Write a class called Vampire 
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 #  it should have a thirsty attribute, that is true by default
@@ -47,7 +47,7 @@
 
 
 
-#  Write a Dragon class  X
+#  Write a Dragon class  
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
 #  it should have a dynamic color attribute (string)
@@ -56,26 +56,29 @@
 
 # class Dragon
 #     attr_reader :name, :rider, :color, :is_hungry 
-#     def initialize (name, rider, color, is_hungry = "true")
+#     def initialize (name, rider, color, is_hungry = true)
 #         @name = name
 #         @rider = rider
 #         @color = color
-#         @is_hungry = "true"
+#         @is_hungry = true
 #     end
 #     def eat(amount)
 #         if amount >= 4
-#             amount = "false"
+#             hungry = false
 #         else
-#            amount = "true"
+#            hungry = true
 #         end
-#         @is_hungry = amount
+#         @is_hungry = hungry
 #     end
 # end
 # dragon1 = Dragon.new("Drago", "Brendan", "green")
 # p dragon1
 # dragon1.eat(9)
 # p dragon1
-
+# dragon2 = Dragon.new("A", "B", "blue")
+# p dragon2
+# dragon2.eat(6)
+# p dragon2
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
@@ -88,10 +91,31 @@
 
 # class Hobbit
 #     attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring
-# def initialize (name, disposition, age = 0, is_adult = false, is_old = false, has_ring = false)
-#     @name = name
-#     @disposition = disposition
-#     @age = age
-#     @is_adult = is_adult
-#     @is_old = is_old
-#     @has_ring = has_ring
+#     def initialize (name, disposition, age = 0, is_adult = false, is_old = false, has_ring = false)
+#         @name = name
+#         @disposition = disposition
+#         @age = age
+#         @is_adult = is_adult
+#         @is_old = is_old
+#         @has_ring = has_ring
+#     end
+#     def celebrate_birthday
+#         @age = age.next
+#             if @age >= 33
+#                 @is_adult = true
+#             end
+#             if @age >= 101
+#                 @is_old = true
+#             end
+#         end
+#         if name == "Frodo"
+#             @has_ring = true
+#         end
+#     end
+# hobbit1 = Hobbit.new("Sam", "loyal")
+# p hobbit1
+# hobbit1.celebrate_birthday
+# p hobbit1
+
+# hobbit2 = Hobbit.new("Frodo", "reluctant hero")
+# p hobbit2
