@@ -47,7 +47,7 @@
 
 
 
-#  Write a Dragon class
+#  Write a Dragon class  X
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
 #  it should have a dynamic color attribute (string)
@@ -56,15 +56,25 @@
 
 # class Dragon
 #     attr_reader :name, :rider, :color, :is_hungry 
-#     def initialize (name, rider, color, is_hungry = true)
+#     def initialize (name, rider, color, is_hungry = "true")
 #         @name = name
 #         @rider = rider
 #         @color = color
-#         @is_hungry = is_hungry
+#         @is_hungry = "true"
+#     end
+#     def eat(amount)
+#         if amount >= 4
+#             amount = "false"
+#         else
+#            amount = "true"
+#         end
+#         @is_hungry = amount
 #     end
 # end
 # dragon1 = Dragon.new("Drago", "Brendan", "green")
-# p dragon1.is_hungry
+# p dragon1
+# dragon1.eat(9)
+# p dragon1
 
 
 #  Write a Hobbit class
